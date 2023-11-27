@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form">
+            <div class="title">Get Started</div>
+            
+            <div>
+                <label for="username">Name: </label>
+                <i class="fas fa-user"></i>
+
+                <input type="text" name="username" id="username" placeholder="NAME" />
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="fas fa-check-circle success-icon"></i>
+
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <i class="far fa-envelope"></i>
+                
+                <input type="email" name="email" id="email" placeholder="abc@xyz.com"/>
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <i class="fas fa-lock"></i>
+
+                <input type="password" name="password" id="password" placeholder="PASSWORD" />
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="fas fa-check-circle success-icon"></i>
+
+                <div class="error"></div>
+            </div>
+
+            <button id="btn" type="submit">Submit</button>
+            <div></div>
+
+        </form>
+    </div>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
