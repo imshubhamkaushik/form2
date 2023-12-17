@@ -10,7 +10,7 @@ form = id("form"),
 
 errorMsg = classes("error"), 
 successIcon = classes("success-icon"), 
-failureIcon = classes = classes("failure-icon")
+failureIcon = classes("failure-icon")
 
 
 // Engine function to handle form validation
@@ -28,6 +28,7 @@ let engine = (id , serial, message) => {
         
         failureIcon[serial].style.opacity = "1"
         successIcon[serial].style.opacity = "0"
+        return false;
 
     }else{
         errorMsg[serial].innerHTML = "";
@@ -35,6 +36,7 @@ let engine = (id , serial, message) => {
 
         failureIcon[serial].style.opacity = "0"
         successIcon[serial].style.opacity = "1"
+        return true;
 
     }
 }
@@ -42,7 +44,11 @@ let engine = (id , serial, message) => {
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
 
-    engine(username, 0, "Username cannnot be blank");
-    engine(email , 1, "Email cannot be blank")
-    engine(password, 2, "Password cannot be blank")
+    let isUsernameValid = engine(username, 0, "Username cannnot be blank");
+    let isEmailValid = engine(email , 1, "Email cannot be blank")
+    let isPasswordValid = engine(password, 2, "Password cannot be blank");
+
+    if(isUsernameValid && isEmailValid && isPasswordValid) {
+        window.location.href = 'index2.html'
+    }
 })
