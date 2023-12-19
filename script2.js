@@ -79,7 +79,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
     state: state
   }
   //Send data to the server using Axios POST request
-  axios.post('',formData)
+  axios.post('https://my-json-server.typicode.com/imshubhamkaushik/form2',formData)
   .then(function(res){
     console.log('Data sent to server: ', res.data);
   })
