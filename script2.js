@@ -53,6 +53,17 @@ document.getElementById("form").addEventListener("submit", function (event) {
     return;
   } else {
     openModal();
+
+    //Show form information in the console
+    console.log("Form Data:-");
+    console.log("First Name:". fName);
+    console.log("Last Name:", lName);
+    console.log("EMail:", email);
+    console.log("Phone:", phone);
+    console.log("Address:", address);
+    console.log("City:", city);
+    console.log("Pincode:", pincode);
+    console.log("State:", state);
   }
 
   this.reset(); //reset the form
