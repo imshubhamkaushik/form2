@@ -7,6 +7,7 @@ function openModal() {
 
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault(); //Prevent the default form submission
+  
   //Get Form values
   const fName = document.getElementById("firstname").value;
   const lName = document.getElementById("lastname").value;
@@ -65,6 +66,26 @@ document.getElementById("form").addEventListener("submit", function (event) {
     console.log("Pincode:", pincode);
     console.log("State:", state);
   }
+
+  //Prepare data to be sent
+  const formData= {
+    firstName: fName,
+    lastName: lName,
+    email: email,
+    phone: phone,
+    address: address,
+    city: city,
+    pinxode: pincode,
+    state: state
+  }
+  //Send data to the server using Axios POST request
+  axios.post('',formData)
+  .then(function(res){
+    console.log('Data sent to server: ', res.data);
+  })
+  .catch(function (err){
+    console.error("Error sending data to server: ", err);
+  })
 
   this.reset(); //reset the form
 });
