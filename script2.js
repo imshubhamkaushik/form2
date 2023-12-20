@@ -89,33 +89,3 @@ document.getElementById("form").addEventListener("submit", function (event) {
 
   this.reset(); //reset the form
 });
-
-//If validation passes, construct the message to display
-// const message = `Thank you For registering with us, ${fName} ${lName}`
-
-// alert(message);
-// let popup = document.getElementById("popup")
-
-// function openPopup(){
-//     popup.classList.add("open-popup")
-// }
-
-// function closePopup(){
-//     popup.classList.remove("open-popup");
-// }
-
-// if(fName ==''|| lName == '' || email == '' || phone == '' || address == '' || city == '' || pincode == ''){
-//     swal({
-//         title: "Field Empty!!!",
-//         text: "Field entry is missing!",
-//         icon: "warning",
-//         button: "Ok",
-//       });
-// }else{
-//     swal({
-//         title: "Good job!",
-//         text: "The information is submitted!",
-//         icon: "success",
-//         button: "Ok",
-//       });
-// }
