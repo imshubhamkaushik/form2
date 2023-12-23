@@ -96,8 +96,8 @@ document
         console.log("Data has been submitted");
       } catch (error) {
         console.log(
-          `Something Went Wrong while posting the date to server`,
-          error.stack
+          `Something Went Wrong while posting the data to server`,
+          error.stack //In JavaScript, when an error occurs, you can access the stack property of the error object to get a string representing the location in the code where the error occurred. This includes the function calls and lines of code that led to the error.
         );
       }
     }
